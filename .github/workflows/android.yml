@@ -4,8 +4,6 @@ on:
   push:
     branches:
         - master
-    tags:
-      - '*'
 
 jobs:
   Gradle:
@@ -13,16 +11,24 @@ jobs:
     steps:
     - name: checkout code
       uses: actions/checkout@v2
+
     - name: setup jdk
       uses: actions/setup-java@v1
       with:
         java-version: 17
+
     - name: Make Gradle executable
       run: chmod +x ./gradlew
+
     - name: Build Release APK
-      run: ./gradlew assembleRelease
-    - name: Releasing using Hub
-      uses: kyze8439690/action-release-releaseapk@master
+      run: ./gradlew 
+      
+    - name: Publish Release APK
+      uses: marp-team/setup-android@v2
+      with:
+        project-path: app
+        build-script: assembleRelease
       env:
-       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-       APP_FOLDER: app
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    
