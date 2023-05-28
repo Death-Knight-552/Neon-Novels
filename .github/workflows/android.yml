@@ -27,7 +27,6 @@ jobs:
 
     - name: Releasing using Hub
       uses: VladDaniliuk/action-release-releaseapk@master
-
       env:
        GITHUB_TOKEN: ${{ secrets.TOKEN }}
        VERSION_VARIABLE: versionName

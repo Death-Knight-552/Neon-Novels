@@ -1,4 +1,4 @@
-package com.knightshrestha.neonnovels.ui.notifications
+package com.knightshrestha.neonnovels.ui.create
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
