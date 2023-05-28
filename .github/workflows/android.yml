@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: Neon Novels
-          path: "app/build/outputs/apk/release/Neon Novels_${{ github.event.inputs.version }}.apk"
+          path: "app/build/outputs/apk/release/Neon\ Novels_${{ github.event.inputs.version }}.apk"
 
   release:
     name: Release APK
