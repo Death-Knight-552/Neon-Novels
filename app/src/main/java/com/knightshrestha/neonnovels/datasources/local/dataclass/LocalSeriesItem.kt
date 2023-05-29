@@ -8,8 +8,8 @@ import com.google.gson.annotations.SerializedName
 data class LocalSeriesItem(
     @PrimaryKey(autoGenerate = true) var seriesID: Int = 0,
     var title: String,
-    @SerializedName("updated_at") var updatedAt: Long,
-    @SerializedName("created_at") var createdAt: Long,
+    @SerializedName("updated_at") var updatedAt: Long? = 0,
+    @SerializedName("created_at") var createdAt: Long? = 0,
     var thumbnail: String? = null,
     var synopsis: String? = null,
     var genres: List<String>? = null,

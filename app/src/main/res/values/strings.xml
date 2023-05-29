@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Neon Novels</string>
+    <string name="app_name">Neon-Novels</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_create">Create</string>
@@ -12,4 +12,15 @@ Can Sei enjoy her slow dreamy different world life without her saint title being
 
 </string>
     <string name="thumbnail">thumbnail</string>
+
+<!--    CREATE PAGE XML STRING RESOURCES-->
+    <string name="fragment_create_hint_title">Title</string>
+    <string name="fragment_create_hint_thumbnail">Thumbnail</string>
+    <string name="fragment_create_hint_synopsis">Synopsis</string>
+    <string name="fragment_create_hint_genres">Genres, separated by commas(,)</string>
+    <string name="fragment_create_hint_download">Download</string>
+    <string name="fragment_create_hint_author">Author</string>
+    <string name="fragment_create_hint_alias">Alias, separated by lines</string>
+    <string name="fragment_create_button_submit">CREATE</string>
+
 </resources>
