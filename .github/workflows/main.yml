@@ -75,10 +75,11 @@ jobs:
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: Death-Knight-552/Neon-Novels
         with:
           tag_name: v${{ github.event.inputs.version }}
           name: Release v${{ github.event.inputs.version }}
-          body_path: ${{ github.repository }}/CHLOG.md
+          body_path: ${{ github.workspace }}/CHLOG.md
           draft: false
           prerelease: false
           files: Neon Novels/Neon Novels_${{ github.event.inputs.version }}.apk
