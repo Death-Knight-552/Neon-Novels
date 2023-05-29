@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - '*'
+  workflow_dispatch:
 
 jobs:
   Gradle:
@@ -14,7 +15,7 @@ jobs:
     - name: setup jdk
       uses: actions/setup-java@v1
       with:
-        java-version: 11
+        java-version: 17
     - name: Make Gradle executable
       run: chmod +x ./gradlew
     - name: Build Release APK
@@ -22,7 +23,7 @@ jobs:
     - name: Releasing using Hub
       uses: VladDaniliuk/action-release-releaseapk@master
       env:
-       GITHUB_TOKEN: ${{ secrets.TOKEN }}
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        VERSION_VARIABLE: versionName
        APP_FILE: buildSrc/Android.kt
        APP_FOLDER: ./app/release/app.apk
