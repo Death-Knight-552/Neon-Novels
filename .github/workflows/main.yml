@@ -78,7 +78,7 @@ jobs:
         with:
           tag_name: v${{ github.event.inputs.version }}
           name: Release v${{ github.event.inputs.version }}
-          body: This is to see
+          body_path: ./CHLOG.md
           draft: false
           prerelease: false
           files: Neon Novels/Neon Novels_${{ github.event.inputs.version }}.apk
