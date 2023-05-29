@@ -65,7 +65,8 @@ jobs:
       - name: Download APK from build
         uses: actions/download-artifact@v1
         with:
-          name: Neon Novels
+          name: Neon Novels_2.0.apk
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -77,5 +78,5 @@ jobs:
           draft: false
           prerelease: false
           files: Neon Novels/Neon Novels_${{ github.event.inputs.version }}.apk
-          
+
   
