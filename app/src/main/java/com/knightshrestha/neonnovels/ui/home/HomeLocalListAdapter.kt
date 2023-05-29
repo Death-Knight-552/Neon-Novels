@@ -2,6 +2,7 @@ package com.knightshrestha.neonnovels.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.knightshrestha.neonnovels.databinding.FragmentHomeRvItemBinding
@@ -41,13 +42,15 @@ class HomeLocalListAdapter(
 //        holder.updated.setCompoundDrawablesWithIntrinsicBounds(0,0, if (isExpanded) R.drawable.ic_less else R.drawable.ic_more, 0)
 //
 //
-//        holder.itemView.setOnClickListener {
+        holder.itemView.setOnClickListener {
+            val action = HomeFragmentDirections.actionNavigationHomeToNavigationDetails(item)
+            holder.itemView.findNavController().navigate(action)
 //            if (expandedPosition >= 0) {
 //                notifyItemChanged(expandedPosition)
 //            }
 //            expandedPosition = if (isExpanded) -1 else position
 //            notifyItemChanged(expandedPosition)
-//        }
+        }
 //
 //        holder.bookList.setOnClickListener {
 //            val action = BookListFragmentDirections.actionBookListFragmentToDetailFragment(item.bookID)

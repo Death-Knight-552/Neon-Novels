@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/text_title_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/placeholder_title" />
+
+        <TextView
+            android:id="@+id/text_updated_at_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Updated At: 24 May, 2023 at 04:30 PM" />
+
+        <TextView
+            android:id="@+id/text_author_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Author: " />
+
+        <TextView
+            android:id="@+id/text_genres_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Genres: " />
+
+        <ImageView
+            android:id="@+id/image_thumbnail_detail"
+            android:layout_width="match_parent"
+            android:layout_height="540dp"
+            android:contentDescription="@string/thumbnail"
+            android:src="@drawable/placeholder_thumbnail" />
+
+        <TextView
+            android:id="@+id/text_synopsis_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/placeholder_synopsis" />
+
+        <TextView
+            android:id="@+id/text_download_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Download: " />
+
+        <TextView
+            android:id="@+id/text_alias_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Alias: " />
+
+    </LinearLayout>
+
+</ScrollView>

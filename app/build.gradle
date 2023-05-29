@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("com.google.devtools.ksp")
-
+    id "androidx.navigation.safeargs"
+    id "kotlin-parcelize"
 }
 
 android {
@@ -13,8 +14,8 @@ android {
         applicationId "com.knightshrestha.neonnovels"
         minSdk 31
         targetSdk 33
-        versionCode 3
-        versionName "2.0.1"
+        versionCode 4
+        versionName "3.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

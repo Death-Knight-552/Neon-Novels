@@ -3,7 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_create">Create</string>
-   <string name="placeholder_title">The Power of the Saint is All Around</string>
+    <string name="title_details">Details</string>
+    <string name="placeholder_title">The Power of the Saint is All Around</string>
     <string name="placeholder_synopsis">Sei, a 20 year old office worker was summoned to a different world after finishing some overtime work. But the person who had summoned her looked at her face and said, “This is not the Saint.” Is this neglect play!?
 
 Sei left the royal palace and concealed her saint title. She started working at a laboratory where she made potions and cosmetics. She used her magic to grant people’s requests and slowly people began suspecting that she was a saint…
@@ -13,7 +14,7 @@ Can Sei enjoy her slow dreamy different world life without her saint title being
 </string>
     <string name="thumbnail">thumbnail</string>
 
-<!--    CREATE PAGE XML STRING RESOURCES-->
+    <!--    CREATE PAGE XML STRING RESOURCES-->
     <string name="fragment_create_hint_title">Title</string>
     <string name="fragment_create_hint_thumbnail">Thumbnail</string>
     <string name="fragment_create_hint_synopsis">Synopsis</string>
@@ -22,5 +23,7 @@ Can Sei enjoy her slow dreamy different world life without her saint title being
     <string name="fragment_create_hint_author">Author</string>
     <string name="fragment_create_hint_alias">Alias, separated by lines</string>
     <string name="fragment_create_button_submit">CREATE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
