@@ -65,13 +65,7 @@ jobs:
       - name: Download APK from build
         uses: actions/download-artifact@v1
         with:
-          name: Neon Novels_${{ github.event.inputs.version }}.apk
-          
-      # - name: Add Changelog
-      #   id: changelog
-      #   run: |
-      #     echo "::set-output name=changelog::$(cat CHLOG.md)"
-
+          name: Neon Novels
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -82,5 +76,5 @@ jobs:
           name: Release v${{ github.event.inputs.version }}
           draft: false
           prerelease: false
-          # body: ${{ steps.changelog.outputs.changelog }}
           files: Neon Novels/Neon Novels_${{ github.event.inputs.version }}.apk
+  
