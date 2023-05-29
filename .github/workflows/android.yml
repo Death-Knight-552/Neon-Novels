@@ -62,10 +62,16 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Check Download Path
+        run: |
+            APK_PATH=$(find $(pwd)/app/build/outputs/apk/release/ -name "*.apk" -type f)
+            echo "APK File Path: $APK_PATH"
+            
       - name: Download APK from build
         uses: actions/download-artifact@v1
         with:
           name: Neon Novels_2.0.apk
+        
 
       - name: Create Release
         id: create_release
