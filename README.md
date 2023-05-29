@@ -1,0 +1,1 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Death-Knight-552/Neon-Novels?label=Current%20Release&style=plastic)
