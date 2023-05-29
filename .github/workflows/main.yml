@@ -69,6 +69,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: Neon Novels
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -77,6 +78,7 @@ jobs:
         with:
           tag_name: v${{ github.event.inputs.version }}
           name: Release v${{ github.event.inputs.version }}
+          body: This is to see
           draft: false
           prerelease: false
           files: Neon Novels/Neon Novels_${{ github.event.inputs.version }}.apk
