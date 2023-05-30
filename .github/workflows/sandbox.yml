@@ -30,3 +30,6 @@ jobs:
       - name: Run Workflow
         if: steps.commit_check.outputs.release_commit == 'true'
         run: echo SuccessFully Done ${{ steps.commit_check.outputs.version}} ${{ steps.commit_check.outputs.release_commit}}
+
+      - name: Some Normal Steps
+        run: echo this ran auto
