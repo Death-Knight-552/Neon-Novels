@@ -10,7 +10,7 @@ on:
 
 jobs:
   auto:
-    name: Run WorkFlow Automatically
+    name: Get App Version
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push'}}
     outputs:
