@@ -18,6 +18,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.setDisplayShowHomeEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.setHomeButtonEnabled(false)
+
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
@@ -27,14 +34,12 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_create
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_settings
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
-        actionBar?.apply {
-            setDisplayShowHomeEnabled(true)
-            setHomeButtonEnabled(true)
-        }
+
+
         navView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->

@@ -13,13 +13,17 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_details"
             app:destination="@id/navigation_details" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_create"
+            app:destination="@id/navigation_create" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.knightshrestha.neonnovels.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_create"
@@ -36,4 +40,8 @@
             android:name="SeriesItem"
             app:argType="com.knightshrestha.neonnovels.datasources.local.dataclass.LocalSeriesItem" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.knightshrestha.neonnovels.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

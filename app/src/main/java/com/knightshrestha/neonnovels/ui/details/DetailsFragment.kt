@@ -56,6 +56,7 @@ class DetailsFragment : Fragment() {
         binding.textAliasDetail.text = data.alias.toString()
 
 
+//        activity.actionBar.ba
 
         return root
     }

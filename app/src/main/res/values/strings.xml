@@ -3,6 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_create">Create</string>
+    <string name="title_setting">Settings</string>
     <string name="title_details">Details</string>
     <string name="placeholder_title">The Power of the Saint is All Around</string>
     <string name="placeholder_synopsis">Sei, a 20 year old office worker was summoned to a different world after finishing some overtime work. But the person who had summoned her looked at her face and said, “This is not the Saint.” Is this neglect play!?
@@ -25,5 +26,19 @@ Can Sei enjoy her slow dreamy different world life without her saint title being
     <string name="fragment_create_button_submit">CREATE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>
