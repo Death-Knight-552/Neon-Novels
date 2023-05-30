@@ -27,9 +27,6 @@ jobs:
               echo "::set-output name=release_commit::false"
           fi;
 
-      - name: Check out repository code
-        uses: actions/checkout@v3
-
       - name: Run Workflow
         if: steps.commit_check.outputs.release_commit == 'true'
         run: echo SuccessFully Done ${{ steps.commit_check.outputs.version}}
