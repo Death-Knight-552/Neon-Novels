@@ -78,7 +78,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: Neon Novels
-          path: "app/build/outputs/apk/release/Neon\ Novels_${{ needs.auto.outputs.version }}.apk"
+          path: "app/build/outputs/apk/release/Neon\ Novels_v${{ needs.auto.outputs.version }}.apk"
 
   release:
     name: Release APK
