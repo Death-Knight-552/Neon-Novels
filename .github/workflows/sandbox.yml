@@ -24,9 +24,9 @@ jobs:
               echo "{release_commit}={true}" >> $GITHUB_OUTPUT
               echo "{version}=$version" >> $GITHUB_OUTPUT
           else 
-              echo "::set-output name=release_commit::false"
+              echo "{release_commit}={false}" >> $GITHUB_OUTPUT
           fi;
 
       - name: Run Workflow
-        if: steps.commit_check.outputs.release_commit == 'true'
-        run: echo SuccessFully Done ${{ steps.commit_check.outputs.version}}
+        # if: steps.commit_check.outputs.release_commit == 'true'
+        run: echo SuccessFully Done ${{ steps.commit_check.outputs.version}} ${{ steps.commit_check.outputs.release_commit}}
