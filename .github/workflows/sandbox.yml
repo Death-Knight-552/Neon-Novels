@@ -21,8 +21,8 @@ jobs:
           regex="^Release v([0-9]+\.[0-9]+\.[0-9]+)"
           if [[ $commit_message =~ $regex ]]; then
               version="${BASH_REMATCH[1]}"
-              echo "::set-output name=release_commit::true"
-              echo "::set-output name=version::$version"
+              echo "{release_commit}={true}" >> $GITHUB_OUTPUT
+              echo "{version}=$version" >> $GITHUB_OUTPUT
           else 
               echo "::set-output name=release_commit::false"
           fi;
@@ -32,4 +32,4 @@ jobs:
 
       - name: Run Workflow
         if: steps.commit_check.outputs.release_commit == 'true'
-        run: echo SuccessFully Done
+        run: echo SuccessFully Done ${{ steps.commit_check.outputs.version}}
