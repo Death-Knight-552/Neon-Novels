@@ -28,5 +28,5 @@ jobs:
           fi;
 
       - name: Run Workflow
-        # if: steps.commit_check.outputs.release_commit == 'true'
+        if: steps.commit_check.outputs.release_commit == 'true'
         run: echo SuccessFully Done ${{ steps.commit_check.outputs.version}} ${{ steps.commit_check.outputs.release_commit}}
