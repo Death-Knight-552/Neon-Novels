@@ -1,6 +1,13 @@
-# RELEASE NO. 001
+# Changes
 
-This is the first release of this app.
+## Added Features
 
-## Current Features:
-- Nothing
+-
+
+## Removed Features
+
+-
+
+## Bug Fixes
+
+-
