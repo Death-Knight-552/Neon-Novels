@@ -5,6 +5,9 @@ permissions:
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
@@ -18,3 +21,18 @@ jobs:
           ls ${{ github.workspace }}
       - name: Read a File from repo
         run: echo "$(cat CHLOG.md)"
+      - name: Check Commit Message
+        id: commit_check
+        run: |
+          commit_message="${{ github.event.head_commit.message }}"
+          regex="^Release v([0-9]+\.[0-9]+\.[0-9]+)"
+          if [[ $commit_message =~ $regex ]]; then
+            version="${BASH_REMATCH[1]}"
+            echo "::set-output name=release_commit::true"
+            echo "::set-output name=version::$version"
+          else
+            echo "::set-output name=release_commit::false"
+
+      - name: Run Workflow
+        if: steps.commit_check.outputs.release_commit == 'true'
+        run: echo SuccessFul
