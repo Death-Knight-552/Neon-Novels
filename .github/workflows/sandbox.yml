@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Build Signed APK
+    name: Start the Virtual Machine
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -16,3 +16,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Read a File from repo
+        run: echo "$(cat CHLOG.md)"
