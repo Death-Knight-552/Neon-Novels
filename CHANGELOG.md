@@ -2,8 +2,8 @@
 
 ## Added Features
 
-- Settings Page
-
 ## Removed Features
 
 ## Bug Fixes
+
+- Back Button Working Correctly
